@@ -20,25 +20,19 @@ long long totalDays(int d, int m, int y) {
         if (i == 2 && leap(y))
             days++;
     }
-
     return days;
 }
-
 int main() {
     int n;
     cin >> n;  
-
     int dd=n / 10000;
     int mm=(n / 100)%100;
     int yy=(n % 100)+2000;
-
     int dd1=24;
     int mm1=6;
     int yy1=2006;
-
     long long date1=totalDays(dd, mm, yy);
     long long date2=totalDays(dd1, mm1, yy1);
-
     cout << (abs(date1 - date2));
 
     return 0;
